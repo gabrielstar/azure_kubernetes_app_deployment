@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: gabrielstarazurekubernetesappdeployment 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: gabrielstarazurekubernetesappdeployment 
+    spec:
+      containers:
+        - name: gabrielstarazurekubernetesappdeployment 
+          image: gabrielstar.azurecr.io/gabrielstarazurekubernetesappdeployment
+          ports:
+          - containerPort: 8080
